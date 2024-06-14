@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
+<title>Javascript Assignment Lesson 5</title>
+</head>
+<body class="container d-flex flex-column justify-content-center align-items-center">
+
+    <div id="part1">
+        <!-- to be filled dynamically -->
+    </div>
+
+    <form onsubmit="handleSubmit(event)" class="row g-3 w-75 p-3 mt-5 border rounded shadow was-validated" novalidate>
+        <div class="form-floating col-12 mb-3">
+            <input type="text" class="form-control" id="name" name="name" placeholder="name here" required>
+            <label for="name" class="ps-3">Name</label>
+            <div class="invalid-feedback">Please Enter Your Name</div>
+        </div>
+        <div class="form-floating col-12 mb-3">
+            <input type="email" class="form-control" id="email" name="email" placeholder="email here" required>
+            <label for="email" class="ps-3">Email</label>
+            <div class="invalid-feedback">Please Enter Your Email</div>
+        </div>
+        <div class="form-floating col-12 mb-3">
+            <textarea class="form-control" id="message" name="message" placeholder="message here"></textarea>
+            <label for="message" class="ps-3">Message</label>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Send to console</button>
+        </div>
+    </form>
+
+    <div id="part3" class="w-75 p-3 my-5 border rounded shadow">
+        <div class="d-flex flex-column align-items-center" id="panel">
+            <h3>Click a shape to modify!</h3>
+            <label for="color-select">Select a Color</label>
+            <input type="color" name="color" id="color-select">
+            <label for="rot-select">Rotate</label>
+            <input type="range" name="rot" id="rot-select" min="0" max="90" value="0">
+            <label for="rad-select">Round</label>
+            <input type="range" name="rad" id="rad-select" min="0" max="50" value="0">
+        </div>
+
+        <div id="boxes">
+            <div class="box" id="tl">
+                <div class="shape" id="tl-shape"></div>
+            </div>
+            <div class="box" id="tm">
+                <div class="shape" id="tm-shape"></div>
+            </div>
+            <div class="box" id="tr">
+                <div class="shape" id="tr-shape"></div>
+            </div>
+            <div class="box" id="ml">
+                <div class="shape" id="ml-shape"></div>
+            </div>
+            <div class="box" id="mm">
+                <div class="shape" id="mm-shape"></div>
+            </div>
+            <div class="box" id="mr">
+                <div class="shape" id="mr-shape"></div>
+            </div>
+            <div class="box" id="bl">
+                <div class="shape" id="bl-shape"></div>
+            </div>
+            <div class="box" id="bm">
+                <div class="shape" id="bm-shape"></div>
+            </div>
+            <div class="box" id="br">
+                <div class="shape" id="br-shape"></div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

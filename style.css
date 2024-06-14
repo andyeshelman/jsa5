@@ -1,0 +1,16 @@
+#boxes {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.shape {
+    aspect-ratio: 1 / 1;
+    width: 10vw;
+}
+
+.box {
+    padding: 5%;
+    border: 5px solid white;
+}
