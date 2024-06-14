@@ -83,7 +83,8 @@ for (const row of "tmb") {
         const cell = document.getElementById(row+col);
         cell.setAttribute("onclick", `newSelection("${row+col}")`);
         const shape = document.getElementById(row+col+"-shape");
-        shape.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16).padStart(6,'0');
+            // "<<" is bitwise left shift, "1<<24" = 0xFFFFFF + 1, and "<<0" is just a slick way to floor
+        shape.style.backgroundColor = '#'+(Math.random()*(1<<24)<<0).toString(16).padStart(6,'0');
         shape.style.rotate = Math.random()*90 + "deg"
         shape.style.borderRadius = Math.random()*50 + "%"
     }
